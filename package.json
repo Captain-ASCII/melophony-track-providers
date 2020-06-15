@@ -1,0 +1,29 @@
+{
+  "name": "melophony-track-providers",
+  "version": "1.0.0",
+  "description": "A module used to group every track providers that may be used to fill the Melophony track database.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "melophony",
+    "melophony-api",
+    "melophony-track-providers"
+  ],
+  "author": "Daniel Ben-Lulu",
+  "license": "GPLv3",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-typescript": "^3.0.0",
+    "ts-node": "^8.7.0",
+    "tsconfig-paths": "^3.9.0",
+    "tslib": "1.11.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.0"
+  }
+}
