@@ -1,0 +1,22 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "env": {
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+      "semi": [ "error", "never" ],
+      "quotes": [ "error", "single" ],
+      "@typescript-eslint/interface-name-prefix": [ "off" ],
+      "@typescript-eslint/no-explicit-any": [ "off" ]
+    }
+  }
