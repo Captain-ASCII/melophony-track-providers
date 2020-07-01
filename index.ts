@@ -1,28 +1,32 @@
 
-import ITrackProvider, { OnTrackAddedCallback } from '@providers/ITrackProvider'
+import ITrackProvider, { OnTrackAddedCallback, StringField } from '@providers/ITrackProvider'
 
 import NullTrackProvider from '@providers/NullTrackProvider'
 import LocalTrackProvider from '@providers/LocalTrackProvider'
 
-
-export type TrackProviderType = typeof NullTrackProvider | typeof LocalTrackProvider
-
 const NULL_TRACK_PROVIDER = 'NullTrackProvider'
 const LOCAL_TRACK_PROVIDER = 'LocalTrackProvider'
 
-const _TRACK_PROVIDERS = new Map<string, TrackProviderType>()
+class TrackProviderFactory {
 
-_TRACK_PROVIDERS.set(NULL_TRACK_PROVIDER, NullTrackProvider)
-_TRACK_PROVIDERS.set(LOCAL_TRACK_PROVIDER, LocalTrackProvider)
+  getAvailableTrackProviders(): Array<string> {
+    return [ NULL_TRACK_PROVIDER, LOCAL_TRACK_PROVIDER ]
+  }
 
+  getTrackProvider(providerName: string, filesDir: string, callback: OnTrackAddedCallback): ITrackProvider | null {
+    switch (providerName) {
+      case NULL_TRACK_PROVIDER: {
+        return new NullTrackProvider()
+      }
+      case LOCAL_TRACK_PROVIDER: {
+        return new LocalTrackProvider(filesDir, callback)
+      }
 
-function getTrackProviders(): Map<string, TrackProviderType> {
-  return _TRACK_PROVIDERS
+      default: {
+        return null
+      }
+    }
+  }
 }
 
-function getTrackProvider(providerName: string): TrackProviderType | undefined {
-  return _TRACK_PROVIDERS.get(providerName)
-}
-
-
-export { NULL_TRACK_PROVIDER, LOCAL_TRACK_PROVIDER, getTrackProviders, getTrackProvider, ITrackProvider, OnTrackAddedCallback }
+export { LOCAL_TRACK_PROVIDER, TrackProviderFactory, ITrackProvider, OnTrackAddedCallback, StringField }
