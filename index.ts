@@ -1,7 +1,7 @@
 
-import ITrackProvider, { OnTrackAddedCallback, StringField } from '@providers/ITrackProvider'
+import ITrackProvider, { OnTrackAddedCallback, StringField } from './src/providers/ITrackProvider'
 
-import LocalTrackProvider from '@providers/LocalTrackProvider'
+import LocalTrackProvider from './src/providers/LocalTrackProvider'
 
 const LOCAL_TRACK_PROVIDER = 'LocalTrackProvider'
 

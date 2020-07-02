@@ -2,13 +2,14 @@
 import FileSystem from 'fs'
 import Path from 'path'
 
-import { MissingRequiredFieldError, FileNotFoundError } from '@utils/Errors'
-import { removeDir } from '@utils/TestUtils'
+import Environment from '../Environment'
 
-import LocalTrackProvider from '@providers/LocalTrackProvider'
+import { MissingRequiredFieldError, FileNotFoundError } from '../src/utils/Errors'
+import { removeDir } from '../src/utils/TestUtils'
 
-import Environment from '@environment'
-import { TrackProviderFactory, LOCAL_TRACK_PROVIDER, ITrackProvider, OnTrackAddedCallback } from '@index'
+import LocalTrackProvider from '../src/providers/LocalTrackProvider'
+
+import { TrackProviderFactory, LOCAL_TRACK_PROVIDER, ITrackProvider, OnTrackAddedCallback } from '../index'
 
 
 function getLocalTrackProvider(filesDir = '', callback: OnTrackAddedCallback = (): void => { return }): ITrackProvider {

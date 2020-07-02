@@ -18,7 +18,9 @@ export class StringField {
 }
 
 
-export interface OnTrackAddedCallback { (title: string, artistName: string, duration: number): void }
+export interface OnTrackAddedCallback {
+  (title: string, artistName: string, duration: number): void;
+}
 
 
 export default interface ITrackProvider {

@@ -10,14 +10,7 @@
     "target": "es6",
     "module": "commonjs",
     "outDir": "build",
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@index": ["index.ts"],
-      "@environment": ["Environment.ts"],
-      "@providers/*": ["src/providers/*"],
-      "@utils/*": ["src/utils/*"]
-    }
+    "moduleResolution": "node"
   },
   "plugins": [
     "@typescript-eslint"

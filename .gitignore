@@ -6,3 +6,4 @@ package-lock.json
 
 # VS Code
 .vscode
+build

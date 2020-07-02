@@ -1,5 +1,5 @@
 
-import Environment from '@environment'
+import Environment from '../../Environment'
 
 enum LOG_LEVELS {
   ERROR = 0,

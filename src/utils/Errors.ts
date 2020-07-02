@@ -1,5 +1,5 @@
 
-import { format } from '@utils/StringUtils'
+import { format } from './StringUtils'
 
 export class FileNotFoundError extends Error {
   private filename: string

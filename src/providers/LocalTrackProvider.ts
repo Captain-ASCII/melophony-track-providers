@@ -2,10 +2,10 @@
 import FileSystem from 'fs'
 import Path from 'path'
 
-import { MissingRequiredFieldError, FileNotFoundError } from '@utils/Errors'
-import { getMp4FileDuration } from '@utils/Mp4Utils'
+import { MissingRequiredFieldError, FileNotFoundError } from '../utils/Errors'
+import { getMp4FileDuration } from '../utils/Mp4Utils'
 
-import ITrackProvider, { StringField, OnTrackAddedCallback } from '@providers/ITrackProvider'
+import ITrackProvider, { StringField, OnTrackAddedCallback } from './ITrackProvider'
 
 
 export default class LocalTrackProvider implements ITrackProvider {

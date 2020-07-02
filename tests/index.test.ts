@@ -1,7 +1,7 @@
 
-import LocalTrackProvider from '@providers/LocalTrackProvider'
+import LocalTrackProvider from '../src/providers/LocalTrackProvider'
 
-import { TrackProviderFactory, LOCAL_TRACK_PROVIDER } from '@index'
+import { TrackProviderFactory, LOCAL_TRACK_PROVIDER } from '../index'
 
 
 it('should get every providers', () => {
